@@ -1,0 +1,43 @@
+Field,Explanation
+TrialID,"Numerical id of the trial. This is an auto-incrementing integer. This number is device specific, different devices will have their own trial 1, trial 2, trial 3, etc. If the application is uninstalled and then installed again, this number might reset."
+UserID,"A user identifier. It consists of AASG. AA is age, represented by a two digit integer. S is sex/gender, represented by the letters M for Male, F for Female, O for Other, X for No Answer (N/A). G is for whether the user wears glasses or not, represented by the letter Y for Yes or N for No."
+TobiiTimestamp,"This is from Tobii's SDK. Internal eye-tracker timestamp, in long format."
+Frame,The Unity3D frame during which this data was recorded.
+CurrentImageFilename,The name of the image file currently being displayed.
+CurrentAudioFile,The name of the audio file the microphone is currently recording to.
+ImagePositionx,"The position of the GameObject where the image is displayed, in Unity3D. This object has no rotation applied to it, and its ""front face"" (the face where the image is rendered) is facing towards negative Z."
+ImagePositiony,"The position of the GameObject where the image is displayed, in Unity3D. This object has no rotation applied to it, and its ""front face"" (the face where the image is rendered) is facing towards negative Z."
+ImagePositionz,"The position of the GameObject where the image is displayed, in Unity3D. This object has no rotation applied to it, and its ""front face"" (the face where the image is rendered) is facing towards negative Z."
+ImagePixelSizex,The pixel width and height of the current image.
+ImagePixelSizey,The pixel width and height of the current image.
+HeadPositionx,Position of the camera in Unity3D.
+HeadPositiony,Position of the camera in Unity3D.
+HeadPositionz,Position of the camera in Unity3D.
+HeadForwardx,Forward vector of the camera in Unity3D.
+HeadForwardy,Forward vector of the camera in Unity3D.
+HeadForwardz,Forward vector of the camera in Unity3D.
+HeadUpx,Up vector of the camera in Unity3D.
+HeadUpy,Up vector of the camera in Unity3D.
+HeadUpz,Up vector of the camera in Unity3D.
+GazeRayHitx,"The hit point of a raycast, performed using the Gaze Ray, against the GameObject where the image is displayed. The coordinates are in normalized texture coordinates, with 0,0 being the middle of the image, -0.5,-0.5 being the bottom left corner and 0.5,0.5 being the top right corner."
+GazeRayHity,"The hit point of a raycast, performed using the Gaze Ray, against the GameObject where the image is displayed. The coordinates are in normalized texture coordinates, with 0,0 being the middle of the image, -0.5,-0.5 being the bottom left corner and 0.5,0.5 being the top right corner."
+GazePixelRadius,"The radius, in image pixels, of a 1 visual degree circle. This value is rounded to the nearest integer. This value varies depending on the distance from the camera to the image. It is currently calculated at runtime using the distance from the Gaze Ray Origin and the GazeRayHit (the point on the image the user is looking at)."
+GazeRayWorldOriginx,"This is from Tobii's SDK. The 3d point in Unity3D where the Gaze Ray originates from. It's between the eyes, so it is essentially equal to the HeadPosition. Stored for sanity check."
+GazeRayWorldOriginy,"This is from Tobii's SDK. The 3d point in Unity3D where the Gaze Ray originates from. It's between the eyes, so it is essentially equal to the HeadPosition. Stored for sanity check."
+GazeRayWorldOriginz,"This is from Tobii's SDK. The 3d point in Unity3D where the Gaze Ray originates from. It's between the eyes, so it is essentially equal to the HeadPosition. Stored for sanity check."
+GazeRayWorldDirectionx,This is from Tobii's SDK. The vector representing the Gaze Ray's direction in Unity3D. This is in world space coordinates (as opposed to being in the camera's local coordinate system).
+GazeRayWorldDirectiony,This is from Tobii's SDK. The vector representing the Gaze Ray's direction in Unity3D. This is in world space coordinates (as opposed to being in the camera's local coordinate system).
+GazeRayWorldDirectionz,This is from Tobii's SDK. The vector representing the Gaze Ray's direction in Unity3D. This is in world space coordinates (as opposed to being in the camera's local coordinate system).
+GazeRayIsValid,"This is from Tobii's SDK, just a bool representing the SDK's estimation of reliability of the Gaze Ray it calculated."
+GazeType,"The type of eye movement captured in this timestamp. 1 is a fixation, 2 a saccade, 3 a blink. Blink detection comes from the IsLeftEyeBlinking and IsRightEyeBlinking values below, if either is true then I consider it a blink. A saccade is any movement that exceeds 0.2 degrees or moves faster than 35 degrees per second, or has an acceleration greater than 9500 degrees per second squared (same values used by REFLACX)."
+ConvergenceDistance,This is from Tobii's SDK. An estimation of the distance where the gazes of both eyes converge. Reliability falls off a cliff beyond 0.8~1 meter.
+ConvergenceDistanceIsValid,This is from Tobii's SDK. A bool representing the reliability of the ConvergenceDistance value.
+LeftPupilDiameter,"This is from Tobii's SDK. The estimated diameter, in millimeters, of the left pupil."
+IsLeftPupilDiameterValid,This is from Tobii's SDK. A bool representing the reliability of the LeftPupilDiameter value.
+IsLeftEyeBlinking,This is from Tobii's SDK. A bool representing whether the left eye is blinking.
+RightPupilDiameter,"This is from Tobii's SDK. The estimated diameter, in millimeters, of the right pupil."
+IsRightPupilDiameterValid,This is from Tobii's SDK. A bool representing the reliability of the RightPupilDiameter value.
+IsRightEyeBlinking,This is from Tobii's SDK. A bool representing whether the right eye is blinking.
+DeviceID,"A unique device identifier, in UUID format."
+DeviceModel,A string representing the device maker's nomenclature for ths device model.
+SoftwareVersion,The prototype's version (currently 0.2).
